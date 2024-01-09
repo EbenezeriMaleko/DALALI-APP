@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class = "navbar"> 
+        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+        <a asp-area="" asp-controller="Home" asp-action="Agent">OWNER</a>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+        <div class="links">
+            <button><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a></button>
+            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button  type="submit">Logout</button>
+            </form>
+        </div>
+    </header>
+    <div class="mycards">
+        <div class="Cards">
+            <div class = "Card">
+                <img src="@Url.Content("~/Image/Pic01.jpeg")" class="pic" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo est dolore facilis velit magni minus, tempora perferendis adipisci architecto vel veritatis maiores asperiores iste quaerat corrupti hic? Autem, voluptatum!</p>
+            </div>
+            <div class = "Card">
+                <img src="@Url.Content("~/Image/Pic07.jpeg")" class="pic" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, asperiores ab debitis voluptate accusantium ea vitae quibusdam dignissimos eaque laboriosam earum, inventore quam quaerat nostrum doloribus corporis. Ducimus, qui quae!</p>
+            </div>
+            <div class = "Card">
+                <img src="@Url.Content("~/Image/Pic03.jpeg")" class="pic" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptates rerum maiores repudiandae nostrum error voluptatum porro! Eos voluptatum dolore placeat tenetur quae aperiam, tempora perferendis rerum unde. Nam, porro.</p>
+            </div>
+        </div>
+            <div class="Cards2">
+                <div class = "Card">
+                    <img src="@Url.Content("~/Image/Pic04.jpeg")" class="pic" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptates rerum maiores repudiandae nostrum error voluptatum porro! Eos voluptatum dolore placeat tenetur quae aperiam, tempora perferendis rerum unde. Nam, porro.</p>
+                </div>
+                <div class = "Card">
+                    <img src="@Url.Content("~/Image/Pic05.jpeg")" class="pic" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptates rerum maiores repudiandae nostrum error voluptatum porro! Eos voluptatum dolore placeat tenetur quae aperiam, tempora perferendis rerum unde. Nam, porro.</p>
+                </div>
+                <div class = "Card">
+                    <img src="@Url.Content("~/Image/Pic06.jpeg")" class="pic" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptates rerum maiores repudiandae nostrum error voluptatum porro! Eos voluptatum dolore placeat tenetur quae aperiam, tempora perferendis rerum unde. Nam, porro.</p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

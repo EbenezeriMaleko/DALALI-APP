@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model Webapp.Models.PropertyViewModel
+
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <header>
+    <nav class = "navbar">
+        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+        <a asp-area="" asp-controller="Home" asp-action="Agent">OWNER</a>
+        <a asp-area="" asp-controller="Home" asp-action="Account">ACCOUNT</a>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+    </nav>
+    </header> 
+    @if(!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success">
+            @successMessage
+        </div>
+    }else{
+        
+    }
+    <main class = "mainbody">
+        <div class="maincard">
+        <h1>WELCOME TO DALALI APP</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At hic mollitia suscipit ipsum quis fugit quam, maiores obcaecati libero dignissimos aspernatur? Esse officiis quis a voluptatum adipisci provident totam deleniti?</p>
+        @if(SignInManager.IsSignedIn(User))
+        {
+            <button class="welcombutton">
+                <a asp-area="" asp-controller="Home" asp-action="Dashboard">GET STARTED</a>
+            </button>
+        }
+        else{
+        <button class = "welcombutton">
+            <a asp-area="Identity" asp-page="/Account/Login">LOGIN</a>
+        </button>
+        }
+        
+        </div>
+    </main>
+</body>
+</html>
