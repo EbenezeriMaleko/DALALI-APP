@@ -1,0 +1,83 @@
+@model IEnumerable<Webapp.Models.Property>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<header>
+    <nav class = "navbar">
+        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+       <a asp-area="" asp-controller="Properties" asp-action="Create">ADMIN</a>
+        <a asp-action="Dashboard">DASHBOARD</a>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+    </nav>
+</header> 
+<hr>
+<h1>My Properties</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageData)
+            </th> 
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBathrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfBedrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SquareFootage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @if (item.ImageData != null && item.ImageData.Length > 0)
+                    {
+                        <img src="data:image/jpeg;base64;@Convert.ToBase64String(item.ImageData)" alt="Property Image" class="property-image" />
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            Image data is null or empty
+                        </div>
+                    }
+            </td> 
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBathrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBedrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SquareFootage)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PropertyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PropertyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PropertyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

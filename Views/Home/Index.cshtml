@@ -1,11 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-@model Webapp.Models.PropertyViewModel
-
-@{
-    var successMessage = TempData["SuccessMessage"] as string;
-}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,40 +8,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+    body
+    {
+        background-image: url('../Image/Pic02.jpg');
+    }
+    body::before
+    {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1; 
+    }  
+</style>
 </head>
+
 <body>
-      <header>
+    <header>
     <nav class = "navbar">
         <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
-        <a asp-area="" asp-controller="Home" asp-action="Agent">OWNER</a>
-        <a asp-area="" asp-controller="Home" asp-action="Account">ACCOUNT</a>
+        <a asp-area="" asp-controller="Properties" asp-action="Create">ADMIN</a>
+        <a asp-area="Identity"  asp-page="/Account/Manage/Index">ACCOUNT</a>
         <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
     </nav>
-    </header> 
-    @if(!string.IsNullOrEmpty(successMessage))
-    {
-        <div class="alert alert-success">
-            @successMessage
-        </div>
-    }else{
-        
-    }
+    </header>
+    <hr>
+    </hr>
     <main class = "mainbody">
         <div class="maincard">
         <h1>WELCOME TO DALALI APP</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At hic mollitia suscipit ipsum quis fugit quam, maiores obcaecati libero dignissimos aspernatur? Esse officiis quis a voluptatum adipisci provident totam deleniti?</p>
+         <p>Your destination for finding the perfect home. Whether you're a first-time buyer, a seasoned investor, or just curious about the real estate market, we're here to assist you. Explore our listings, discover your dream property, and embark on a journey to a new chapter. We're thrilled to have you here!</p>
         @if(SignInManager.IsSignedIn(User))
         {
             <button class="welcombutton">
-                <a asp-area="" asp-controller="Home" asp-action="Dashboard">GET STARTED</a>
+                <a asp-area="" asp-controller="Properties" asp-action="Dashboard">EXPLORE NOW</a>
             </button>
         }
         else{
         <button class = "welcombutton">
-            <a asp-area="Identity" asp-page="/Account/Login">LOGIN</a>
+            <a asp-area="Identity" asp-page="/Account/Login">GET STARTED</a>
         </button>
         }
-        
+                
         </div>
     </main>
 </body>

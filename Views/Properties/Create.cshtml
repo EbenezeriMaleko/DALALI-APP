@@ -1,0 +1,63 @@
+@model Webapp.Models.Property
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+ <header>
+    <nav class = "navbar">
+        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+        <a asp-area="" asp-controller="Properties" asp-action="Create">ADMIN</a>
+        <a asp-action="Index">MY LIST</a>
+        <a asp-area="" asp-controller="Properties" asp-action="Dashboard">DASHBOARD</a>
+    </nav>
+    </header> 
+<hr/>
+<div class="Createform">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" class="submitform">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PropertyName" class="control-label">Name of the property</label>
+                <input asp-for="PropertyName" class="form-control" />
+                <span asp-validation-for="PropertyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfBathrooms" class="control-label">Number of bathrooms</label>
+                <input asp-for="NumberOfBathrooms" class="form-control" />
+                <span asp-validation-for="NumberOfBathrooms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfBedrooms" class="control-label">Number of bedrooms</label>
+                <input asp-for="NumberOfBedrooms" class="form-control" />
+                <span asp-validation-for="NumberOfBedrooms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SquareFootage" class="control-label">House's squarefootage</label>
+                <input asp-for="SquareFootage" class="form-control" />
+                <span asp-validation-for="SquareFootage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Write a description</label>
+                <textarea  asp-for="Description" class="form-control"/></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label">Property Image</label>
+                <input asp-for="ImageFile" class="form-control" type="file" accept="image*/"/>
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="Createbutton" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,28 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@model IEnumerable<Webapp.Models.Property>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
 <body>
     <header>
         <nav class = "navbar"> 
         <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
-        <a asp-area="" asp-controller="Home" asp-action="Agent">OWNER</a>
+        <a asp-area="" asp-controller="Properties" asp-action="Create">ADMIN</a>
         <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
         <div class="links">
-            <button><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a></button>
-            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button><a asp-area="Identity"  asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a></button>
+            <form asp-area="Identity"  asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                 <button  type="submit">Logout</button>
             </form>
         </div>
     </header>
-    <div class="mycards">
+    <hr>
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    @if(item.ImageData != null && item.ImageData.Length > 0)
+                    {
+                        <img src="data:image/png;base64,@Convert.ToBase64String(item.ImageData)" class="pic"  alt="Property Image">
+                    }
+                    else{
+                        <div class="alert alert-danger" role="alert">
+                            Image data is null or empty
+                        </div>
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.PropertyName)</h5>
+                        <p class="card-text">Bathrooms: @Html.DisplayFor(modelItem => item.NumberOfBathrooms) Bathrooms</p>
+                        <p class="card-text">Bedrooms: @Html.DisplayFor(modelItem => item.NumberOfBedrooms) Bedrooms</p>
+                        <p class="card-text">Description: @Html.DisplayFor(modelItem => item.Description)</p>
+                        <p class="card-text">Square Footage: @Html.DisplayFor(modelItem => item.SquareFootage) sqemeter</p>
+                        <a asp-action="Details" asp-route-id="@item.PropertyId">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+</body>
+    @* <div class="mycards">
         <div class="Cards">
             <div class = "Card">
                 <img src="@Url.Content("~/Image/Pic01.jpeg")" class="pic" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo est dolore facilis velit magni minus, tempora perferendis adipisci architecto vel veritatis maiores asperiores iste quaerat corrupti hic? Autem, voluptatum!</p>
             </div>
             <div class = "Card">
                 <img src="@Url.Content("~/Image/Pic07.jpeg")" class="pic" alt="">
@@ -47,6 +75,4 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa voluptates rerum maiores repudiandae nostrum error voluptatum porro! Eos voluptatum dolore placeat tenetur quae aperiam, tempora perferendis rerum unde. Nam, porro.</p>
                 </div>
             </div>
-    </div>
-</body>
-</html>
+    </div> *@

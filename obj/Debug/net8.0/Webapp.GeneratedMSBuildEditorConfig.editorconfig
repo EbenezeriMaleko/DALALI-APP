@@ -190,12 +190,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Home/Agent.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZ2VudC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Home/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXNoYm9hcmQuY3NodG1s
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Home/Index.cshtml]
@@ -204,6 +200,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Properties/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Views/Shared/Error.cshtml]

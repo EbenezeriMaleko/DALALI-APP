@@ -15,7 +15,7 @@ namespace Webapp.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -211,38 +211,6 @@ namespace Webapp.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Webapp.Models.Property", b =>
-                {
-                    b.Property<int>("PropertyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<byte[]>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("BLOB");
-
-                    b.Property<int>("NumberOfBathrooms")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("NumberOfBedrooms")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("PropertyName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<double>("SquareFootage")
-                        .HasColumnType("REAL");
-
-                    b.HasKey("PropertyId");
-
-                    b.ToTable("Properties");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
