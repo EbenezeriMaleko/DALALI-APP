@@ -1,0 +1,83 @@
+@model Webapp.Models.Property
+
+@{
+    ViewData["Title"] = "Details";
+}
+<header>
+    <nav class = "navbar">
+        <a asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+       <a asp-area="" asp-controller="Properties" asp-action="Create">ADMIN</a>
+        <a asp-action="Index">DASHBOARD</a>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+    </nav>
+</header> 
+<hr>
+<body>
+<div class="CardDetails">
+      <img src="data:image/png;base64,@Convert.ToBase64String(Model.ImageData)" class="DetailPic" alt="Property Image">
+    <div class="text-center mt-4">
+         <h3>@Html.DisplayFor(model => model.PropertyName)</h3>
+    </div>
+
+    <h6>Number of Bedrooms: @Html.DisplayFor(model => model.NumberOfBedrooms) Bedrooms</h6>
+
+    <h6>Number of bathrooms:  @Html.DisplayFor(model => model.NumberOfBathrooms) Bathrooms</h6>
+
+    <h6>Square footage: @Html.DisplayFor(model => model.SquareFootage) squares</h6>
+
+    <h6>Price: 600,000/= per Month</h6>
+
+    <p>This home is not just a dwelling; it's a lifestyle—an unparalleled blend of
+    sophistication, comfort, and indulgence. Your journey to extraordinary living begins here.
+    Contact us today to experience the epitome of luxury living in person.</p>
+
+<div class="text-center mt-4">
+    <h6>Interested in this property? Contact us for more information.</h6>
+    <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn btn-primary">Contact Us</a>
+</div>
+
+    @* <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImageData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfBathrooms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfBathrooms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfBedrooms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfBedrooms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PropertyName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PropertyName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SquareFootage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SquareFootage)
+        </dd>
+    </dl>*@
+</div> 
+@* <div>
+    <a asp-action="Edit" asp-route-id="@Model?.PropertyId">Edit</a> |
+    <a asp-action="Dashboard">Back to List</a>
+</div> *@
+</body>
