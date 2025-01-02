@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Webapp.csproj": {}
+    "/home/THIRD YEAR/SEMESTER I/WEB APPLICATION DEVELOPMENT/DALALI_APP/Webapp.csproj": {}
   },
   "projects": {
-    "/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Webapp.csproj": {
+    "/home/THIRD YEAR/SEMESTER I/WEB APPLICATION DEVELOPMENT/DALALI_APP/Webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Webapp.csproj",
+        "projectUniqueName": "/home/THIRD YEAR/SEMESTER I/WEB APPLICATION DEVELOPMENT/DALALI_APP/Webapp.csproj",
         "projectName": "Webapp",
-        "projectPath": "/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/Webapp.csproj",
+        "projectPath": "/home/THIRD YEAR/SEMESTER I/WEB APPLICATION DEVELOPMENT/DALALI_APP/Webapp.csproj",
         "packagesPath": "/home/ebenezeri/.nuget/packages/",
-        "outputPath": "/home/ebenezeri/Desktop/WEB APPLICATION/Webapp/obj/",
+        "outputPath": "/home/THIRD YEAR/SEMESTER I/WEB APPLICATION DEVELOPMENT/DALALI_APP/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ebenezeri/.nuget/NuGet/NuGet.Config"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -86,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
