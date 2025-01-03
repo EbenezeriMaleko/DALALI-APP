@@ -15,7 +15,7 @@ public class PropertyDbContext : DbContext
 
      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=app.db");
+        optionsBuilder.UseMySQL("server=127.0.0.1;port=3306;database=DALALIAPP;user=dalaliuser;password=msebenze@123;");
     }
     
 }
